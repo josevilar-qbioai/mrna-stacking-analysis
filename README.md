@@ -87,6 +87,10 @@ If you use this code or data, please cite:
 - SantaLucia (1998) — [doi:10.1073/pnas.95.4.1460](https://doi.org/10.1073/pnas.95.4.1460)
 - LinearDesign (Zhang et al. 2023) — [doi:10.1038/s41586-023-06127-z](https://doi.org/10.1038/s41586-023-06127-z)
 
+## Patent notice
+
+The nearest-neighbor stacking thermodynamic profiling method used in this work is protected under Spanish Patent Application **P202630522** ("Método de huella termodinámica del mRNA", OEPM 2026). The code in this repository is released under the MIT License for academic and research purposes. Commercial use of the patented method may require a license from the patent holder.
+
 ## License
 
 MIT License. See [LICENSE](LICENSE).
