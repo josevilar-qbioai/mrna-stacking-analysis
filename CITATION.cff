@@ -13,8 +13,10 @@ authors:
     email: "qmetrika@proton.me"
 version: "1.0.0"
 date-released: "2026-05-16"
+doi: "10.5281/zenodo.20228980"
 license: MIT
 repository-code: "https://github.com/josevilar-qbioai/mrna-stacking-analysis"
+url: "https://doi.org/10.5281/zenodo.20228980"
 keywords:
   - mRNA design
   - codon optimization

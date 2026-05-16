@@ -5,6 +5,8 @@ Reproducible analysis code and data for the paper:
 > **Nearest-Neighbor Stacking Free Energy Profiles as a Complementary Dimension for mRNA Codon Optimization**
 >
 > Jose Antonio Vilar Sanchez (2026)
+>
+> DOI: [10.5281/zenodo.20228980](https://doi.org/10.5281/zenodo.20228980)
 
 ## Overview
 
