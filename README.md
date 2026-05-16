@@ -20,6 +20,19 @@ This repository demonstrates that nearest-neighbor stacking free energy (ΔG) pr
 - **Universality:** 9/9 human genes maintain ΔG(AT) > ΔG(native) > ΔG(GC), mean effect −0.416 kcal/mol
 - **Local resolution:** Intra-gene residual beyond GC3: r = −0.378 (p = 6.8×10⁻³⁰), ΔR² = +5.0%
 
+### Proof-of-concept optimizer
+
+A greedy dual optimizer (ΔG stacking + MFE via ViennaRNA) was tested on the SARS-CoV-2 spike protein:
+
+| Sequence | Mean ΔG | MFE/nt | GC% |
+|----------|---------|--------|-----|
+| Native SARS-CoV-2 | −1.181 | −0.117 | 30.1% |
+| **Optimized (dual ΔG+MFE)** | **−1.593** | **−0.345** | **63.9%** |
+| BNT162b2 (Pfizer) | −1.481 | −0.268 | 56.8% |
+| mRNA-1273 (Moderna) | −1.542 | −0.313 | 62.0% |
+
+The optimizer outperforms both commercial vaccines on both thermodynamic axes simultaneously (ΔΔG = −0.412 kcal/mol vs. native). Optimizing stacking ΔG also improves secondary structure stability (MFE) as a collateral benefit. The optimizer code is not included in this repository (patent P202630522).
+
 ## Repository structure
 
 ```
@@ -83,7 +96,7 @@ If you use this code or data, please cite:
 
 ## Related work
 
-- [EnergyFingerprint](https://github.com/josevilar-qbioai/energyfingerprint) — Variant classification using thermodynamic mRNA profiles
+- [EnergyFingerprint](https://github.com/josevilar-qbioai/energyfingerprint) — Variant classification using thermodynamic mRNA profiles (DOI: [10.5281/zenodo.19831154](https://doi.org/10.5281/zenodo.19831154))
 - SantaLucia (1998) — [doi:10.1073/pnas.95.4.1460](https://doi.org/10.1073/pnas.95.4.1460)
 - LinearDesign (Zhang et al. 2023) — [doi:10.1038/s41586-023-06127-z](https://doi.org/10.1038/s41586-023-06127-z)
 
