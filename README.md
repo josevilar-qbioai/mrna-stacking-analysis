@@ -22,16 +22,17 @@ This repository demonstrates that nearest-neighbor stacking free energy (ΔG) pr
 
 ### Proof-of-concept optimizer
 
-A greedy dual optimizer (ΔG stacking + MFE via ViennaRNA) was tested on the SARS-CoV-2 spike protein:
+A dual optimizer (ΔG stacking + MFE via ViennaRNA) with two modes — greedy and beam search — was tested on the SARS-CoV-2 spike protein:
 
-| Sequence | Mean ΔG | MFE/nt | GC% |
-|----------|---------|--------|-----|
-| Native SARS-CoV-2 | −1.181 | −0.117 | 30.1% |
-| **Optimized (dual ΔG+MFE)** | **−1.593** | **−0.345** | **63.9%** |
-| BNT162b2 (Pfizer) | −1.481 | −0.268 | 56.8% |
-| mRNA-1273 (Moderna) | −1.542 | −0.313 | 62.0% |
+| Sequence | Mean ΔG | MFE/nt | GC% | Total score |
+|----------|---------|--------|-----|-------------|
+| Native SARS-CoV-2 | −1.181 | −0.117 | 30.1% | −0.755 |
+| **Beam search (ΔG+MFE)** | **−1.592** | **−0.370** | **63.9%** | **−1.103** |
+| Greedy (ΔG only) | −1.593 | −0.345 | 63.9% | −1.094 |
+| BNT162b2 (Pfizer) | −1.481 | −0.268 | 56.8% | −0.996 |
+| mRNA-1273 (Moderna) | −1.542 | −0.313 | 62.0% | −1.050 |
 
-The optimizer outperforms both commercial vaccines on both thermodynamic axes simultaneously (ΔΔG = −0.412 kcal/mol vs. native). Optimizing stacking ΔG also improves secondary structure stability (MFE) as a collateral benefit. The optimizer code is not included in this repository (patent P202630522).
+Both modes outperform both commercial vaccines on both thermodynamic axes simultaneously. The beam search integrates MFE into the codon selection (via RNAfold checkpoints every 10 codons), gaining significant MFE improvement (−0.370 vs −0.345) over greedy with negligible ΔG trade-off. The optimizer code is not included in this repository (patent P202630522).
 
 ## Repository structure
 
