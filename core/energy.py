@@ -32,13 +32,13 @@ def stacking_profile(sequence, params=None):
     Args:
         sequence: Secuencia de DNA/RNA (str)
         params: Dict de parámetros dinucleótido→energía.
-                Default: STACKING_SANTALUCIA
+                Default: STACKING_TURNER (parametros RNA).
 
     Returns:
         np.array con energía por posición
     """
     if params is None:
-        params = STACKING_SANTALUCIA
+        params = STACKING_TURNER
 
     seq = sequence.upper().replace('U', 'T')  # RNA → DNA si necesario
     n = len(seq)
