@@ -6,7 +6,7 @@ Reproducible analysis code and data for the paper:
 >
 > Jose Antonio Vilar Sanchez (2026)
 >
-> DOI: [10.5281/zenodo.20228980](https://doi.org/10.5281/zenodo.20228980)
+> DOI: [10.5281/zenodo.20228979](https://doi.org/10.5281/zenodo.20228979)
 
 ## Overview
 
